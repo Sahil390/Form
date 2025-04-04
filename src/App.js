@@ -21,7 +21,6 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Here you can add your form submission logic
   };
 
   return (
