@@ -145,6 +145,11 @@
   background-color: #333;
 }
 
+.warning-text {
+  color: #ffcc00;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
 @media (max-width: 600px) {
   .form-container {
     margin: 1rem;

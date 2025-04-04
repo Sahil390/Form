@@ -20,7 +20,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    alert('Your form has been submitted successfully!');
   };
 
   return (
@@ -65,6 +65,9 @@ function App() {
                 onChange={handleChange}
                 required
               />
+              {formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) && (
+                <p className="warning-text">Please enter a valid email address.</p>
+              )}  
             </div>
 
             <div className="form-group">
@@ -77,6 +80,9 @@ function App() {
                 onChange={handleChange}
                 placeholder="+91 9557589***"
               />
+              {formData.phone && !/^\d{10}$/.test(formData.phone) && (
+                <p className="warning-text">Phone number must be a 10-digit number.</p>
+              )}
             </div>
           </div>
 
